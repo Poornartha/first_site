@@ -1,20 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2 style="text-align: center">{{ search | title }}</h2>
 
+    <h2 style="text-align: center">{{ search | title }}</h2>
+</br>
+<div class = "divider"></div>
     <div class="row">
         {% for post in listings %}
+        <br>
             <div class="col s4">
-                <div class="card">
+                <div class="card" style = "height: 600px;">
                     <div class="card-image" style="height: 400px;">
-                        <a href="/"><img src="{{ post.image.url }}" alt=""></a>
+                        <a href="{{ post.3 }}"><img src="{{ post.2 }}" alt=""></a>
                     </div>
                     <div class="card-content">
-                        <p>{{ post.name }}</p>
+                        <p>{{ post.0 }}</p>
                     </div>
                     <div class="card-action">
-                        <a href="/">View listing: Price {{ post.prize }}</a>
+                        <a href="{{ post.3 }}">View listing: Price {{ post.1 }}</a>
                     </div>
                 </div>
             </div>
